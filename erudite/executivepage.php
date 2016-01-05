@@ -154,17 +154,17 @@ box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,0.75);">
 			      						<span style="font-size:medium">Area: <?php echo $row["t_area"]; ?></span><br/>
 			      						<span style="font-size:medium">Covering area: <?php echo $row["t_carea"]; ?></span><br/>
 			      						<!---->
-			      							<!--?php
-									      	inclued 'xyz.php';
+			      							<?php
+									      	inclued ('xyz.php');
 									      	while($rowval1= mysql_fetch_array($seg))
 									      	{
-									      	?-->
+									      	?>
 			      						<!---->
 			      						<span style="font-size:medium">Teaches:</span><br/>
 			      						<span style="font-size:medium">segments: <?php echo $rowval1["name"]?></span><br/>
-			      						<!--?php
+			      						<?php
 			      						}
-			      						?-->
+			      						?>
 			      						<span style="font-size:medium">Contact no.: <?php echo $row["t_ph"]; ?></span><br/>
 			      						<span style="font-size:medium">Alternative no.: <?php echo $row["t_aph"]; ?> </span><span></span>
 			      					</div>
