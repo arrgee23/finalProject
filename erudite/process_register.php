@@ -54,8 +54,8 @@
 		$data_source=$_POST['source_detail'];
 		$chk=$_POST['chk'];
 
-			$insertion1= "INSERT INTO teacher_details(t_id,t_img,t_nm,t_dob,t_age,t_gen,t_married,t_ph,t_aph,t_email,t_padd,t_cadd,t_area,t_carea,t_hqua,t_sub,t_ins,t_exp,t_cact,t_cv,t_time,t_source,t_doneby)
-	    values('00','$img','$nm','$dob','$age','$gen','$married','$ph','$aph','$email','$padd','$cadd','$area','$carea','$hqua','$sub','$ins','$exp','$cact','$cv','$registration_time','$data_source','$doneby')";
+			$insertion1= "INSERT INTO teacher_details(t_id,t_img,t_nm,t_dob,t_age,t_gen,t_married,t_ph,t_aph,t_email,t_padd,t_cadd,t_area,t_hqua,t_sub,t_ins,t_exp,t_cact,t_cv,t_time,t_source,t_doneby)
+	    values('00','$img','$nm','$dob','$age','$gen','$married','$ph','$aph','$email','$padd','$cadd','$area','$hqua','$sub','$ins','$exp','$cact','$cv','$registration_time','$data_source','$doneby')";
 			$con=$conn->query($insertion1);
 
 
@@ -94,6 +94,9 @@
 			$conn->query($query);*/
 			include 'suse.php';
 			}
+	for($j=0; $j<sizeof($carea);$j++){
+		include 'tear.php';
+	}
 echo "<script>alert('Data stored successfully!')</script>";
 	$conn->close();
 	echo "<script>window.location.href='executivepage.php'</script>";

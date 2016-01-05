@@ -194,7 +194,43 @@ function checkid3(str)
                         </tr>
                          <tr>
                             <td class="label">Area »</td>
-                            <td><input type="text" name="area" placeholder="your locality" required="required"> </td>
+                            <td><select name="area" > 
+                            <?php
+                            	$servername = "localhost";
+                            	$username = "root";
+                            	$password = "";
+                            	$dbname = "erudite";
+
+                            	// Create connection
+                            	$conn = new mysqli($servername, $username, $password,$dbname);
+
+                            	// Check connection
+                            	if ($conn->connect_error) {
+                            	    die("Connection failed: " . $conn->connect_error);
+                            	} 
+
+                            	$sql = "select * from area";
+
+
+                            	$result = $conn->query($sql);
+                            	$one = "<option value='";
+                            	$three = "'>";
+                            	$five = "</option>";
+
+                            	if ($result->num_rows > 0) {
+                            	    // output data of each row
+                            	    while($row = $result->fetch_assoc()) {
+                            	    	$two=$row["id"];
+                            	    	$four=$row["name"];
+                            	        echo $one.$two.$three.$four.$five;
+                            	    }
+                            	} else {
+                            	    echo "0 results";
+                            	}	
+
+
+                            ?>
+                            </td>
                         </tr>
                         
                         <tr>
@@ -207,19 +243,7 @@ function checkid3(str)
 
 	                                <?php
 		                               
-		                                $servername = "localhost";
-		                                $username = "root";
-		                                $password = "";
-		                                $dbname = "erudite";
-
-		                                // Create connection
-		                                $conn = new mysqli($servername, $username, $password,$dbname);
-
-		                                // Check connection
-		                                if ($conn->connect_error) {
-		                                    die("Connection failed: " . $conn->connect_error);
-		                                } 
-
+		                              
 
 		                                $sql = "select * from segment";
 
@@ -352,10 +376,7 @@ function checkid3(str)
                                         }
                                     } else {
                                         echo "0 results";
-                                    } 
-                                    $conn->close();
-
-
+                                    }
 
                                   ?>
                                   </select>
@@ -375,14 +396,6 @@ function checkid3(str)
                                   <!-- <option value="3">Class VII - X</option> -->
 
                                   <?php
-                                   
-                                    $servername = "localhost";
-                                    $username = "root";
-                                    $password = "";
-                                    $dbname = "erudite";
-
-                                    // Create connection
-                                    $conn = new mysqli($servername, $username, $password,$dbname);
 
                                     // Check connection
                                     if ($conn->connect_error) {
@@ -439,11 +452,51 @@ function checkid3(str)
                         </tr>
                          <tr>
                             <td class="label">Covering Areas »</td>
-                            <td><textarea name="carea" placeholder="places can be reached, e.g. Saltlake,Goria" style="width:400px; height:60px;" required="required"></textarea></td>
+
+                            <td><select name="carea[]" multiple='multiple'> 
+                                <?php
+                                	$servername = "localhost";
+                                	$username = "root";
+                                	$password = "";
+                                	$dbname = "erudite";
+
+                                	// Create connection
+                                	$conn = new mysqli($servername, $username, $password,$dbname);
+
+                                	// Check connection
+                                	if ($conn->connect_error) {
+                                	    die("Connection failed: " . $conn->connect_error);
+                                	} 
+
+                                	$sql = "select * from area";
+
+
+                                	$result = $conn->query($sql);
+                                	$one = "<option value='";
+                                	$three = "'>";
+                                	$five = "</option>";
+
+                                	if ($result->num_rows > 0) {
+                                	    // output data of each row
+                                	    while($row = $result->fetch_assoc()) {
+                                	    	$two=$row["id"];
+                                	    	$four=$row["name"];
+                                	        echo $one.$two.$three.$four.$five;
+                                	    }
+                                	} else {
+                                	    echo "0 results";
+                                	}	
+
+
+                                ?>
+                                </td>
+                            
                         </tr>
                         <tr>
                           <td class="label">Current Working Status »</td>
-                          <td><input type="text" name="cact" id="c_activity" placeholder="Current working status" required="required" /> </td>
+                          <td>
+                          <input type="text" name="cact"/>
+                          </td>
                         </tr>
                         <tr>
                         <td class="label">Upload CV</td>
