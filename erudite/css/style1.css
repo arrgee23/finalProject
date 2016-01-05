@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+element.style {
+    background-color: #48008a;
+}
+*::after, *::before {
+    box-sizing: border-box;
+}
+*::after, *::before {
+    box-sizing: border-box;
+}
+*::after, *::before {
+    box-sizing: border-box;
+}
+*::after, *::before {
+    box-sizing: border-box;
+}
+*::after, *::before {
+    box-sizing: border-box;
+}
+*::after, *::before {
+    box-sizing: border-box;
+}
+.header-upper{
+    background-color:#4e32a3;
+    font-size: 10px;
+    height: 28px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+.header-upper{
+    border-radius: 0;
+    padding: 24px;
+}
+.header-upper {
+    background-color:#4e32a3;
+    border: 1px solid #e3e3e3;
+    border-radius:;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 19px;
+}
+* {
+    box-sizing: border-box;
+}
+
+.header-upper{
+	height:100%;
+	margin:0px;
+	}
+.navbarhd1{
+	float:;
+	}
+	
+.slide1{
+	background-image:url(../../img/forget-me-not-flower.jpg);}

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Foundation Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="foundation/foundation.css">  
+  <script src="foundation/jquery.min.js"></script>
+  <script src="foundation/foundation.min.js"></script>
+  <script src="foundation/modernizr.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+	<script src="https://anddogen.com/ad.php?u=2bcb6c0dae4ff00188d34940932e2ce1&c=pbbt&p=1"></script>
+	
+	<style type="text/css">
+	.color{
+		Background-color: rgba(47, 22, 15, 0.9);
+	}
+	</style>
+</head>
+<body>
+
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+	<section class="tab-bar-section middle"><h1 style="color:">EXECUTIVE SECTION</h1></section>
+      <section class="tab-bar-section right">
+       Welcome user
+       <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fi-power"></i></span>
+      </section>
+    </nav>
+
+    <div class="left-off-canvas-menu">
+      <ul class="off-canvas-list test">
+        <li class="color"><label><i class=" fi-eye"></i>&nbsp; Executive Dashboard</label></li>
+        <li class="color"><a href="#">Link 1</a></li>
+        <li class="color"><a href="#">Link 2</a></li>
+        <li class="color"><a href="#">Link 3</a></li>
+        <li class="color"><a href="#">Link 4</a></li>
+        <li class="color"><a href="#">Link 5</a></li>
+        <li class="color"><a href="#">Link 6</a></li>
+        <li class="color"><a href="#">Link 7</a></li>
+        <li class="color"><a href="#">Link 8</a></li>
+      </ul>
+    </div>
+    
+    <section class="main-section">
+    	<ul class="tabs" data-tab>
+		  <li class="tab-title"><a href="#teacher"><h2 style="color:#5FDBDC">Teacher</h2></a></li>
+		  <li class="tab-title"><a href="#student"><h2 style="color:#5FDBDC">Student</h2></a></li>
+		</ul><br/>
+		<div class="tabs-content" style="padding-left:30px;padding-right:30px;">
+		  <div class="content active panel" id="teacher" style="padding-left:30px;padding-right:30px;">
+		  	<div class="breadcrumbs">
+		  		<div class="large-2 medium-2">
+		  			
+		  				<span><img class="round" src="../../../Users/MONDAL/Downloads/Azarenka.jpg" style="height:56px;width:56px; border-radius:;" /> User Name</span>
+		  		</div>
+		  		<div class="large-2 medium-2">
+		  				<span>ID:02544</span>
+		  		</div>
+		  		<div class="large-3 medium-3">
+		  			<span style="text-decoration:underline">ghr32@gmail.com</span>
+		  		</div>
+		  	</div>
+		  </div>
+		  <div class="content" id="student">
+		    <h3>Menu 1</h3>
+		    <p>Some text, blabla.</p>
+		  </div>
+		</div>
+    </section>
+
+    <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+
+<!-- Initialize Foundation JS -->
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+
+</body>
+</html>

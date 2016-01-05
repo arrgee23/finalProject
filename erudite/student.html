@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Get The Best Tutor For You</title>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="simpleform.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.css" />
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    		
+
+</head>
+
+<body style="background-image:url('blur-background04.jpg')">
+
+<!-- popup -->
+  <div class="modal fade" id="myModal" role="dialog" style="display:none;">
+    <div class="modal-dialog">    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>      
+    </div>
+  </div>
+<!--end-->
+<div class="well" style="background-color:rgba(249, 98, 41, 0.93); color:white">
+	<center><span style="font-family:'Times New Roman', Times, serif;color:white;font-size:47px">Erudite Enterprise</span></center>
+	<div class="nav-icon"><span class="pull-right nav-icon"><a id="a_icon" style=" text-decoration:none;color:#FFFFFF" alt="back to home" href="index.html"> <i class="fa fa-home fa-2x"></i></a></span></div>
+</div>
+<div class="container-fluid">
+		<center><span style="color:rgba(249, 98, 41, 0.93); font-size:28px;">Tell us in detail <br/>so that we can find the best teacher for you or your child</span></center>		
+		<br />
+		<form class="form-inline" id="testform2" method="post" role="form" style="">
+			<fieldset class="personal-data">
+			<!--progress bar-->
+				<div class="progress">
+				    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100" style="width:3%">
+				      &nbsp;&nbsp;&nbsp;&nbsp;0% Complete 
+				    </div>
+				</div>
+			<!--end-->
+			
+			<div class="col-sm-12">
+			<center><label>Basic Information</label></center><br/>
+					<label class="control-label col-sm-2" for="name">Gurdian Name: <span class="required">*</span></label>
+					<input type="text" id="name" name="name" placeholder="Amit Kumar" /><br/>
+
+					<label class="control-label col-sm-2" for="phone">Phone:<span class="required">*</span></label>
+					<input type="tel" name="phone" id="phone" placeholder="0000-000-000" /><br/>
+					<label class="control-label col-sm-2" for="phone">Alternative Number:</label>
+					<input type="tel" name="phone" id="phone" placeholder="0000-000-000" /><br/>
+
+					<label class="control-label col-sm-2" for="email-address">Email: <span class="required">*</span></label>
+					<input type="email" name="email" id="email" placeholder="example@email.com" /><br/>
+			</div>
+			<div class="col-sm-12">
+			<hr>
+			<center><label>Address Deatils</label></center><br/>
+
+				<label class="control-label col-sm-2" for="address">Full Address: <span class="required">*</span></label>
+				<textarea type="text" id="name" name="address" placeholder="Enter full address" style="width:400px; height:100px;background-color:rgba(255, 247, 247, 0.37);"></textarea><br/>
+				
+				<label class="control-label col-sm-2" for="landmark">Landmark: <span class="required">*</span></label>
+				<textarea type="text" id="name" name="address" placeholder="e.g. any park, tall building,etc" style="width:400px; height:50px;background-color:rgba(255, 247, 247, 0.37);"></textarea><br/>
+
+				<label class="control-label col-sm-2" for="other">Other:</label>
+				<textarea type="text" id="name" name="address" placeholder="enter any other details" style="width:400px; height:50px; background-color:rgba(255, 247, 247, 0.37);"></textarea><br/>			
+			</div>
+			</fieldset>
+
+			<fieldset class="personal-data">
+			<!--progress bar-->
+				<div class="progress">
+				    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%">
+				      &nbsp;&nbsp;25% Complete (success)
+				    </div>
+				</div>
+			<!--end-->
+			<div class="col-sm-12">
+			<center><label>Student Details</label></center><br/>
+
+					<label for="name">Student Full Name: <span class="required">*</span></label>
+					<input type="text" id="name" name="spouse_name" placeholder="John Smith" />
+
+					<label for="email-address">Spouse Email: <span class="required">*</span></label>
+					<input type="email" name="email" id="spouse_email" placeholder="example@email.com" />
+
+					<label for="phone">Phone:</label>
+					<input type="tel" name="phone" id="phone" placeholder="000-000-000" />
+			</div>
+			</fieldset>
+
+			<fieldset class="address-data-inputs">
+					<label for="house-id">Building Number:</label>
+					<input type="text" id="house-id" name="house-id" placeholder="1" />
+
+					<label for="street">Street: <span class="required">*</span></label>
+					<input type="text" id="street" name="street" placeholder="The Street" />
+
+					<label for="town">Town:</label>
+					<input type="text" id="town" name="town" placeholder="A Town"/>
+
+					<label for="county">County:</label>
+					<input type="text" id="county" name="county" placeholder="San Luis Obispo"/>
+
+					<label for="postal-code">Postal Code:</label>
+					<input type="text" id="postal-code" name="postal-code" placeholder="93401" />
+			</fieldset>
+
+			<fieldset class="message-details">
+					<label for="comments">Comments:</label>
+					<textarea name="comments" id="comments"></textarea>
+        	</fieldset>
+        	<div class="clear"></div>
+		</form>
+		<br/>
+	</div>
+	<!--container end-->
+
+		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="simpleform.min.js"></script>
+	
+	<script type="text/javascript">
+		
+		$("#testform2").simpleform({
+			speed : 500,
+			transition : 'slide',
+			progressBar : true,
+			showProgressText : true,
+			validate: true
+		});
+
+		
+
+		function validateForm(formID, Obj){
+
+			switch(formID){
+				case 'testform' :
+					Obj.validate({
+						rules: {
+							email: {
+								required: true,
+								email: true
+							},
+							name: {
+								required: true
+							},
+							street: {
+								required: true
+							}
+						},
+						messages: {
+							email: {
+								required: "Please enter an email address",
+								email: "Not a valid email address"
+							},
+							name: {
+							 	required: "Please enter your name"
+							},
+							street: {
+								required: "Please enter street name"
+							}
+						}
+					});
+				return Obj.valid();
+				break;
+
+				case 'testform2' :
+					Obj.validate({
+						rules: {
+							email: {
+								required: true,
+								email: true
+							},
+							name: {
+								required: true
+							},
+							spouse_email: {
+								required: true,
+								email: true
+							},
+							spouse_name: {
+								required: true
+							},
+							street: {
+								required: true
+							}
+						},
+						messages: {
+							email: {
+								required: "Please enter an email address",
+								email: "Not a valid email address"
+							},
+							name: {
+							 	required: "Please enter your name"
+							},
+							spouse_email: {
+								required: "Please enter an email address",
+								email: "Not a valid email address"
+							},
+							spouse_name: {
+							 	required: "Please enter your spouses name"
+							},
+							street: {
+								required: "Please enter street name"
+							}
+						}
+					});
+				return Obj.valid();
+				break;
+			}
+		}
+		</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>

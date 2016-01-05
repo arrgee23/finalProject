@@ -1,0 +1,59 @@
+<?php
+error_reporting(E_ALL ^ E_DEPRECATED);
+session_start();
+$link=mysql_connect("localhost","root","")or die("can not connect");
+		mysql_select_db("erudite",$link) or die("can not select database");
+		$id= $_SESSION['id'];
+		$res = mysql_query("select * from executive_table where ex_user_id='$id'");
+		while($rowval = mysql_fetch_array($res))
+		 {
+			$doneby= $rowval['ex_name'];
+		 }
+
+		
+		move_uploaded_file($_FILES['timg']['tmp_name'],"Photos/".$_FILES['timg']['name']);
+		$img = "Photos/".$_FILES['timg']['name'];
+		$nm=$_POST['name'];
+		$dob=$_POST['dob'];
+		$age=$_POST['age'];
+		$gen=$_POST['gen'];
+		$married=$_POST['married'];
+		$ph=$_POST['ph'];
+		$aph=$_POST['aph'];
+		$email=$_POST['email'];
+		$padd=$_POST['padd'];
+		$cadd=$_POST['cadd'];
+		$area=$_POST['area'];
+		$carea=$_POST['carea'];
+		$hqua=$_POST['hqua'];
+		$sub=$_POST['sub'];
+		$ins=$_POST['ins'];
+		$exp=$_POST['exp'];
+		$cact=$_POST['cact'];
+		move_uploaded_file($_FILES['cv']['tmp_name'],"CVs/".$_FILES['cv']['name']);
+		$cv = "CVs/".$_FILES['cv']['name'];
+		$registration_time = date("Y-m-d");
+		$data_source=$_POST['source_detail'];
+		$chk=$_POST['chk'];
+			
+		
+		$r="insert into teacher_details(t_id,t_img,t_nm,t_dob,t_age,t_gen,t_married,t_ph,t_aph,t_email,t_padd,t_cadd,t_area,t_carea,t_hqua,t_sub,t_ins,t_exp,t_cact,t_cv,t_time,t_source,t_doneby)
+	    values ('00','$img','$nm','$dob','$age','$gen','$married','$ph','$aph','$email','$padd','$cadd','$area','$carea','$hqua','$sub','$ins','$exp','$cact','$cv','$registration_time','$data_source','$doneby')";
+		mysql_query($r,$link)or die(mysql_error());
+		$r1= mysql_query("SELECT LAST(t_id) FROM teacher_details Desc LIMIT 1");
+		while($row = mysql_fetch_array($r1))
+		{
+			$teacherId= $row["t_id"];
+		}
+		
+		for ($i=0; $i<sizeof($chk);$i++){
+
+		 	$query= "INSERT INTO teachersegmentsubject(teacherId,segmentsubjectId) values('$teacherId','".$chk[$i]."')";
+			mysql_query($query,$link)or die(mysql_error());
+			}
+			
+		mysql_close($link);
+		echo "<script>alert('Data stored successfully!')</script>";
+		echo "<script>window.location.href='executivepage.php'</script>";
+
+?>

