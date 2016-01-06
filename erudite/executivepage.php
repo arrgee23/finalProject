@@ -111,7 +111,7 @@ session_start();
 			      	<?php
 			      	mysql_connect("localhost","root","");
 			      	mysql_select_db("erudite");
-			      	$t_det=mysql_query("select * from teacher_details");
+			      	$t_det=mysql_query("SELECT * from teacher_details");
 			      	while($row= mysql_fetch_array($t_det))
 			      	{
 			      	?>
@@ -151,20 +151,50 @@ box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,0.75);">
 			      					</div>
 			      					<div class="row">
 			      					<hr style="background-color:black"/>
-			      						<span style="font-size:medium">Area: <?php echo $row["t_area"]; ?></span><br/>
-			      						<span style="font-size:medium">Covering area: <?php echo $row["t_carea"]; ?></span><br/>
-			      						<!---->
-			      							<?php
-									      	inclued ('xyz.php');
-									      	while($rowval1= mysql_fetch_array($seg))
-									      	{
-									      	?>
-			      						<!---->
-			      						<span style="font-size:medium">Teaches:</span><br/>
-			      						<span style="font-size:medium">segments: <?php echo $rowval1["name"]?></span><br/>
+			      						<span style="font-size:medium">Area: 
 			      						<?php
-			      						}
-			      						?>
+			      						$areas=mysql_query("SELECT area.name as area FROM teacher_details JOIN teacherarea ON teacher_details.t_id=teacherarea.teacherId
+			      						JOIN area ON area.id=teacherarea.areaId");
+			      						
+			      						while($row2= mysql_fetch_array($areas))
+			      						{ 
+			      						
+			      							echo $row2["area"]." ";
+			      						 
+			      						} 
+			      						?> 
+			      						</span><br/>
+			      						
+
+			      						<span style="font-size:medium">Teaches:
+			      						
+			      							<?php
+			      							$subjects=mysql_query("SELECT subject.name as subject FROM teacher_details 
+			      								JOIN teachersegmentsubject ON teacher_details.t_id=teachersegmentsubject.teacherId
+			      								JOIN segmentsubject ON teachersegmentsubject.segmentsubjectId=segmentsubject.id
+			      								JOIN subject ON segmentsubject.subjectId = subject.id");
+			      							while($row3= mysql_fetch_array($subjects))
+			      							{ 
+			      								echo $row3["subject"]." ";
+			      							} 
+			      							?> 
+
+			      						</span><br/>			      					
+			      						<span style="font-size:medium">segments: 
+			      						
+			      							<?php
+			      							$segments=mysql_query("SELECT segment.name as segment FROM teacher_details 
+			      								JOIN teachersegmentsubject ON teacher_details.t_id=teachersegmentsubject.teacherId
+			      								JOIN segmentsubject ON teachersegmentsubject.segmentsubjectId=segmentsubject.id
+			      								JOIN segment ON segmentsubject.segmentId = segment.id");
+			      							while($row4= mysql_fetch_array($segments))
+			      							{ 
+			      								echo $row4["segment"]." ";
+			      							} 
+			      							?> 
+
+			      						</span><br/>
+			      						
 			      						<span style="font-size:medium">Contact no.: <?php echo $row["t_ph"]; ?></span><br/>
 			      						<span style="font-size:medium">Alternative no.: <?php echo $row["t_aph"]; ?> </span><span></span>
 			      					</div>
